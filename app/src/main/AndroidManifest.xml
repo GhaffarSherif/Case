@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SlideshowActivity"
+            android:label="@string/title_activity_slideshow" >
+        </activity>
+        <activity
+            android:name=".Slideshow.SlideshowButtonsActivity"
+            android:label="@string/title_activity_slideshow_buttons" >
+        </activity>
     </application>
 
 </manifest>
