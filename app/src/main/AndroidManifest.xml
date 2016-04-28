@@ -19,10 +19,10 @@
         <activity
             android:name=".SlideshowActivity"
             android:label="@string/title_activity_slideshow" >
-        </activity>
-        <activity
-            android:name=".Slideshow.SlideshowButtonsActivity"
-            android:label="@string/title_activity_slideshow_buttons" >
+            <intent-filter>
+                <action android:name=".SlideshowActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

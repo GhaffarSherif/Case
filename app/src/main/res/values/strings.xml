@@ -10,4 +10,10 @@
     <string name="repeat">Repeat</string>
     <string name="title_activity_slideshow">SlideshowActivity</string>
     <string name="title_activity_slideshow_buttons">SlideshowButtonsActivity</string>
+    <string name="mainMenuTitle">Main Menu</string>
+    <string name="databaseBtn">Soccer Database</string>
+    <string name="slideShowBtn">Slideshow</string>
+    <string name="messengerBtn">Messenger</string>
+    <string name="animationBtn">Animation</string>
+    <string name="exitBtn">Exit</string>
 </resources>

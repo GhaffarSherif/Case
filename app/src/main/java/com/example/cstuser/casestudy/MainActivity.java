@@ -1,5 +1,6 @@
 package com.example.cstuser.casestudy;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
+    Button slideShowButton;
     Button exitButton;
 
     @Override
@@ -17,7 +19,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        slideShowButton = (Button) this.findViewById(R.id.slideShowBtn);
         exitButton = (Button) this.findViewById(R.id.exitBtn);
+        slideShowButton.setOnClickListener(this);
         exitButton.setOnClickListener(this);
 
         Toast.makeText(getApplicationContext(), "Welcome!", Toast.LENGTH_LONG).show();
@@ -26,15 +30,18 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
 
     public void onClick(View v) { // OnClick listeners for exit button
+        if (v.getId() == slideShowButton.getId()){
+            Intent i = new Intent("com.example.cstuser.casestudy.SlideshowActivity");
+            startActivity(i);
+        }
         if (v.getId() == exitButton.getId()){
 
-            Toast.makeText(getApplicationContext(), "BYE MA NIGGA", Toast.LENGTH_SHORT).show(); // YOU PROLLY SHOULD NOT CHANGE THIS MESSAGE :D
+            Toast.makeText(getApplicationContext(), "See you later!", Toast.LENGTH_SHORT).show();
             // make intent
             //delay
             //show webpage intent
             finish();
         }
-
     }
 
 
