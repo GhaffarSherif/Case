@@ -56,6 +56,7 @@ public class MainActivity extends Activity implements Animation.AnimationListene
     public void onAnimationEnd(Animation arg0) {
         Intent i = new Intent("com.example.ctuser.casestudy.MainMenu");
         startActivity(i);
+        finish();
     }
 
     @Override

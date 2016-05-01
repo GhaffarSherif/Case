@@ -16,49 +16,4 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/databaseBtn"
-        android:id="@+id/databaseBtn"
-        android:layout_below="@+id/mainMenuTitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="39dp"
-        android:width="180dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/slideShowBtn"
-        android:id="@+id/slideShowBtn"
-        android:layout_below="@+id/databaseBtn"
-        android:layout_centerHorizontal="true"
-        android:width="180dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/messengerBtn"
-        android:id="@+id/messengerBtn"
-        android:layout_below="@+id/slideShowBtn"
-        android:layout_centerHorizontal="true"
-        android:width="180dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/animationBtn"
-        android:id="@+id/animationBtn"
-        android:layout_below="@+id/messengerBtn"
-        android:layout_centerHorizontal="true"
-        android:width="180dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/exitBtn"
-        android:id="@+id/exitBtn"
-        android:layout_below="@+id/animationBtn"
-        android:layout_centerHorizontal="true"
-        android:width="180dp" />
 </RelativeLayout>
