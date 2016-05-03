@@ -32,7 +32,7 @@ public class SlideshowActivity extends Activity {
         setContentView(R.layout.slideshow_layout);
 
         FragmentManager fm = getFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
+        //FragmentTransaction ft = fm.beginTransaction();
         frag1 = fm.findFragmentById(R.id.fragment1);
         frag2 = fm.findFragmentById(R.id.fragment2);
 
