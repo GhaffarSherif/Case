@@ -1,8 +1,6 @@
 package com.example.cstuser.casestudy;
 
-/**
- * Created by sherif on 2016-04-29.
- */
+
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,7 +8,9 @@ import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.SubMenu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -31,7 +31,7 @@ public class MainMenu extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
+       super.onCreateOptionsMenu(menu);
         CreateMenu(menu);
         return true;
     }
@@ -42,29 +42,19 @@ public class MainMenu extends Activity {
     }
 
     private void CreateMenu(Menu menu){
+
         MenuItem mnu1 = menu.add(0, 0, 0, "Soccer Database");
-        {
-            mnu1.setAlphabeticShortcut('a');
-            mnu1.setIcon(R.mipmap.ic_launcher);
-        }
+        SubMenu subMenu = menu.addSubMenu(0, Menu.NONE, 1, "New Form");
+
+
         MenuItem mnu2 = menu.add(0, 1, 1, "Slideshow");
-        {
-            mnu2.setAlphabeticShortcut('b');
-            mnu2.setIcon(R.mipmap.ic_launcher);
-        }
+
         MenuItem mnu3 = menu.add(0, 2, 2, "SMS Messenger");
-        {
-            mnu3.setAlphabeticShortcut('c');
-            mnu3.setIcon(R.mipmap.ic_launcher);
-        }
+
         MenuItem mnu4 = menu.add(0, 3, 3, "Animation");
-        {
-            mnu4.setAlphabeticShortcut('c');
-        }
+
         MenuItem mnu5 = menu.add(0, 4, 4, "Exit");
-        {
-            mnu4.setAlphabeticShortcut('d');
-        }
+
     }
     private boolean MenuChoice(MenuItem item){
         switch (item.getItemId()) {
