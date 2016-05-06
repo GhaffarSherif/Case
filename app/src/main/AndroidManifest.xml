@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DatabaseMenu"
+            android:name=".Database.DatabaseMenu"
             android:label="Menu" >
             <intent-filter>
                 <action android:name="com.example.cstuser.casestudy.DatabaseMenu" />

@@ -43,16 +43,14 @@ public class MainMenu extends Activity {
 
     private void CreateMenu(Menu menu){
 
-        MenuItem mnu1 = menu.add(0, 0, 0, "Soccer Database");
-        SubMenu subMenu = menu.addSubMenu(0, Menu.NONE, 1, "New Form");
-
+      // MenuItem mnu1 = menu.add(0, 0, 0, "Soccer Database");
+        SubMenu subMenu = menu.addSubMenu(Menu.NONE, 0, 1, "Database");
+        subMenu.add(1,5,1,"Soccer");
+        subMenu.add(2,6,2,"Team");
 
         MenuItem mnu2 = menu.add(0, 1, 1, "Slideshow");
-
         MenuItem mnu3 = menu.add(0, 2, 2, "SMS Messenger");
-
         MenuItem mnu4 = menu.add(0, 3, 3, "Animation");
-
         MenuItem mnu5 = menu.add(0, 4, 4, "Exit");
 
     }
@@ -80,6 +78,10 @@ public class MainMenu extends Activity {
                 Toast.makeText(this, "Bye! Come back soon! ", Toast.LENGTH_LONG).show();
                 finish();
                 return true;
+            case 5: // Submenu SOCCER
+                return  true;
+            case 6: // Submenu team
+                return  true;
         }
         return false;
     }
