@@ -33,13 +33,13 @@ public class SlideshowButtons extends Fragment implements View.OnClickListener {
     private String mParam1;
     private String mParam2;
 
-    static CheckBox repeat;
-    static RadioButton legendText;
-    static RadioButton playSoundFile;
-    static Button startButton;
-    static Button returnToMainMenu;
-    static boolean repeatSlideshow = false;
-    static boolean playSound = false;
+    CheckBox repeat;
+    RadioButton legendText;
+    RadioButton playSoundFile;
+    Button startButton;
+    Button returnToMainMenu;
+    boolean repeatSlideshow = false;
+    boolean playSound = false;
 
     private OnFragmentInteractionListener mListener;
 

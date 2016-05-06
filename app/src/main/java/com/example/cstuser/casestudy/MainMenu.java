@@ -28,10 +28,6 @@ public class MainMenu extends Activity {
         Toast.makeText(getApplicationContext(), "Welcome!", Toast.LENGTH_LONG).show();
     }
 
-    @Override
-    public void onAttachedToWindow() {
-        openOptionsMenu();
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -65,7 +61,7 @@ public class MainMenu extends Activity {
                         Toast.LENGTH_LONG).show();
                 return true;
             case 1: //SLIDESHOW
-                i = new Intent("com.example.cstuser.casestudy.slideshow.SlideshowActivity");
+                i = new Intent("com.example.cstuser.casestudy.SlideshowActivity");
                 startActivity(i);
                 return true;
             case 2: //Animation

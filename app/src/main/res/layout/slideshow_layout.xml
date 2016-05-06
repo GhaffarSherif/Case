@@ -20,7 +20,7 @@
     <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:name="com.example.cstuser.casestudy.slideshow.SlideshowView"
+        android:name="com.example.cstuser.casestudy.slideshow.SlideshowButtons"
         android:id="@+id/fragment2"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"

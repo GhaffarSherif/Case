@@ -29,8 +29,7 @@
             android:name=".slideshow.SlideshowActivity"
             android:label="@string/title_activity_slideshow" >
             <intent-filter>
-                <action android:name="com.example.cstuser.casestudy.slideshow.SlideshowActivity" />
-
+                <action android:name="com.example.cstuser.casestudy.SlideshowActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -39,7 +38,6 @@
             android:label="Menu" >
             <intent-filter>
                 <action android:name="com.example.cstuser.casestudy.DatabaseMenu" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

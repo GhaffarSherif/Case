@@ -7,6 +7,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.example.cstuser.casestudy.R;
 
 
@@ -28,6 +29,8 @@ public class SlideshowView extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    boolean repeatSlideshow = false;
+    boolean playSound = false;
 
     private OnFragmentInteractionListener mListener;
 
@@ -107,4 +110,34 @@ public class SlideshowView extends Fragment {
         // TODO: Update argument type and name
         public void onFragmentInteraction(Uri uri);
     }
+
+    public void receiveData(int identifier, boolean isTrue){
+        if(identifier == 1){
+
+        }
+        else if(identifier == 2){
+
+        }
+        else if(identifier == 3){
+
+        }
+    }
+
+    /*private void startSlideshow() {
+        int[] images = {R.drawable.pic1, R.drawable.pic2, R.drawable.pic3, R.drawable.pic4, R.drawable.pic5};
+
+        for()
+        image.setImageResource(R.drawable.pic1);
+
+        try {
+            for(int i = 0; i < images.length; i++) {
+                image.setImageResource(R.drawable.pic1);
+                Thread.sleep(5 * 1000);
+                if(repeatSlideshow && i == images.length-1)
+                    i = -1;
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }*/
 }
