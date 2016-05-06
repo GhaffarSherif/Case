@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.TextView;
+
 import com.example.cstuser.casestudy.R;
 
 
@@ -22,27 +24,20 @@ public class SlideshowActivity extends Activity {
     Fragment frag2;
 
     ImageView image;
-
-
+    TextView legend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.slideshow_layout);
 
-        /*frag1 = getSupportFragmentManager().findFragmentById(R.id.fragment1);
-        frag2 = getSupportFragmentManager().findFragmentById(R.id.fragment2);*/
-
         FragmentManager fm = getFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
+        //FragmentTransaction ft = fm.beginTransaction();
         frag1 = fm.findFragmentById(R.id.fragment1);
         frag2 = fm.findFragmentById(R.id.fragment2);
 
-        //image = (ImageView) frag2.getView().findViewById(R.id.image);
-    }
-
-    public void passData(int identifier, boolean isTrue){
-        //frag2.receiveData(identifier, isTrue);
+        image = (ImageView) frag2.getView().findViewById(R.id.image);
+        legend = (TextView) frag2.getView().findViewById(R.id.legend);
     }
 
     @Override
@@ -65,5 +60,26 @@ public class SlideshowActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void startSlideshow() {
+        int[] images = {R.drawable.pic1, R.drawable.pic2, R.drawable.pic3, R.drawable.pic4, R.drawable.pic5};
+
+        try {
+            for(int i = 0; i < images.length; i++) {
+                switch(i){
+                    case 1: image.setImageResource(R.drawable.pic1); break;
+                    case 2: image.setImageResource(R.drawable.pic2); break;
+                    case 3: image.setImageResource(R.drawable.pic3); break;
+                    case 4: image.setImageResource(R.drawable.pic4); break;
+                    case 5: image.setImageResource(R.drawable.pic5); break;
+                }
+                Thread.sleep(5 * 1000);
+
+                i %= images.length;
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
