@@ -6,8 +6,8 @@ android {
 
     defaultConfig {
         applicationId "com.example.cstuser.casestudy"
-        minSdkVersion 10
-        targetSdkVersion 10
+        minSdkVersion 11
+        targetSdkVersion 11
         versionCode 1
         versionName "1.0"
     }

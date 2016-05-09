@@ -1,7 +1,5 @@
 package com.example.cstuser.casestudy;
 
-
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -31,7 +29,7 @@ public class MainMenu extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-       super.onCreateOptionsMenu(menu);
+        super.onCreateOptionsMenu(menu);
         CreateMenu(menu);
         return true;
     }
@@ -44,8 +42,8 @@ public class MainMenu extends Activity {
     private void CreateMenu(Menu menu){
 
       // MenuItem mnu1 = menu.add(0, 0, 0, "Soccer Database");
-        SubMenu subMenu = menu.addSubMenu(Menu.NONE, 0, 1, "Database");
-        subMenu.add(1,5,1,"Soccer");
+        SubMenu subMenu = menu.addSubMenu(Menu.NONE, 0, 1, "Soccer Database");
+        subMenu.add(1,5,1,"Player");
         subMenu.add(2,6,2,"Team");
 
         MenuItem mnu2 = menu.add(0, 1, 1, "Slideshow");
@@ -57,16 +55,15 @@ public class MainMenu extends Activity {
     private boolean MenuChoice(MenuItem item){
         switch (item.getItemId()) {
             case 0: //DADABEAZ OPTION
-                Toast.makeText(this, "DADABEZ",
-                        Toast.LENGTH_LONG).show();
+
                 return true;
             case 1: //SLIDESHOW
                 i = new Intent("com.example.cstuser.casestudy.SlideshowActivity");
                 startActivity(i);
                 return true;
             case 2: //Animation
-                Toast.makeText(this, "Start Activity3",
-                        Toast.LENGTH_LONG).show();
+                i = new Intent("com.example.cstuser.casestudy.AnimationCase");
+                startActivity(i);
                 return true;
             case 3://SMS THO
                 Toast.makeText(this, "Activty4",
@@ -78,9 +75,13 @@ public class MainMenu extends Activity {
                 Toast.makeText(this, "Bye! Come back soon! ", Toast.LENGTH_LONG).show();
                 finish();
                 return true;
-            case 5: // Submenu SOCCER
+            case 5: // Submenu Player
+                i = new Intent("com.example.cstuser.casestudy.Database.PlayerDatabaseMenu");
+                startActivity(i);
                 return  true;
             case 6: // Submenu team
+                i = new Intent("com.example.cstuser.casestudy.Database.TeamDatabaseMenu");
+                startActivity(i);
                 return  true;
         }
         return false;

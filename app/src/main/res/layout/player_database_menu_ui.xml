@@ -12,7 +12,7 @@
         android:layout_marginBottom="154dp">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Edit player recrod"
             android:id="@+id/editBtn"
@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Return to main menu"
-        android:id="@+id/button"
+        android:id="@+id/returnBtn"
         android:layout_marginBottom="109dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"

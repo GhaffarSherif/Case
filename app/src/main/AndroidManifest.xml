@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cstuser.casestudy" >
-    <uses-sdk android:minSdkVersion="10" />
+    <uses-sdk android:minSdkVersion="11" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,14 +33,40 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".Database.DatabaseMenu"
-            android:label="Menu" >
+            android:name=".Database.PlayerDatabaseMenu"
+            android:label="@string/title_activity_slideshow" >
             <intent-filter>
-                <action android:name="com.example.cstuser.casestudy.DatabaseMenu" />
+                <action android:name="com.example.cstuser.casestudy.Database.PlayerDatabaseMenu" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+        android:name=".Database.TeamDatabaseMenu"
+        android:label="Swag ">
+        <intent-filter>
+            <action android:name="com.example.cstuser.casestudy.Database.TeamDatabaseMenu" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name=".Database.AddEditDeleteRecord"
+            android:label="Add, edit or delete record">
+            <intent-filter>
+                <action android:name="com.example.cstuser.casestudy.Database.AddEditDeleteRecord" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AnimationCase"
+            android:label="Add, edit or delete record">
+            <intent-filter>
+                <action android:name="com.example.cstuser.casestudy.AnimationCase" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
